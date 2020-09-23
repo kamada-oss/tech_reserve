@@ -1,0 +1,10 @@
+// 以下にimportしたいSCSSファイルを指定する。
+@import "reset";
+@import "font";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "variable";
+@import "mixin";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/home";

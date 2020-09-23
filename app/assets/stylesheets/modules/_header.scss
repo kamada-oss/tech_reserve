@@ -1,0 +1,33 @@
+.header{
+  height: 70px;
+  width: 100%;
+  display: flex;
+  line-height: 80px;
+  border-bottom: solid 1px $border-color;
+  margin-bottom: 10px;
+  &__logo{
+    margin-left: 20px;
+    a{
+      text-decoration: none;
+      color: $black;
+    }
+  }
+  &__message{
+    margin-left: 20px;
+    color: $gray;
+  }
+  &__login{
+    margin-left: 100px;
+    a{
+      text-decoration: none;
+      color: $black;
+    }
+  }
+  &__output-index{
+    margin-left: 100px;
+    a{
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}

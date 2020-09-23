@@ -1,0 +1,19 @@
+= render 'shared/header'
+.top-main
+  .top-main__image
+  .top-main__text
+    %h1 毎日の学習をアウトプット
+    %h2 学習内容を共有したり、
+    %h2 視覚的に楽しむサービスです。
+    .top-main__signup
+      = link_to "#", class: 'btn-guest' do
+        はじめる
+      = link_to "#", class: 'btn-registration' do
+        ユーザー新規登録
+    .top-main__guest
+      %p
+        ポートフォリオ用のゲストユーザーのログインは
+        %span
+          = link_to "#", class: '' do
+            こちら
+= render 'shared/footer'

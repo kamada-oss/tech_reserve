@@ -1,0 +1,17 @@
+.header
+  .header__logo
+    = link_to root_path, class: '' do
+      = icon 'fas', 'chess'
+      Tech_Reserve
+  .header__message
+    %h1
+      ようこそ、ゲストさん！
+  .header__login
+    = link_to '#', class: '' do
+      = icon 'fas', 'user-circle'
+      ログイン
+  .header__output-index
+    = link_to '#', class: '' do
+      = icon 'fas', 'feather'
+      アウトプット一覧
+    
