@@ -1,0 +1,15 @@
+.index-main{
+  height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  &__side-bar{
+    height: 100%;
+    width: 40%;
+    background-color: red;
+  }
+  &__comments{
+    height: 100%;
+    width: 60%;
+    background-color: blue;
+  }
+}

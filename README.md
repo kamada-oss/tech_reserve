@@ -17,8 +17,8 @@
 |introduction|text|
 
 ### Association
-- has_many :likes, dependent: :destroy
-- has_many :comments
+- has_many :goods, dependent: :destroy
+- has_many :comments, dependent: :destroy
 
 ## comments テーブル
 
@@ -30,6 +30,27 @@
 
 ### Association
 - belongs_to :user
+- has_many :categories, through: :comment_categories
+
+## categoriesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|integer|null: false|
+
+### Association
+- has_many :comments, through: :comment_categories
+
+## comment_categories-テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|comment_id|references|null: false, foreign_key: true|
+|category_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :comment
+- belongs_to :category
 
 
 ## goodsテーブル
