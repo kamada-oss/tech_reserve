@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+  get 'categories/show'
   root "home#top"
-  resources :comments, only: [:index, :create, :destroy]
+  resources :categories, only: [:index, :show]
+  resources :comments, only: [:create, :destroy]
 end

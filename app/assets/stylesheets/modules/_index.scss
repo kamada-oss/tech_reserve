@@ -2,14 +2,53 @@
   height: calc(100vh - 80px);
   width: 100%;
   display: flex;
+  // サイドバー
   &__side-bar{
     height: 100%;
-    width: 40%;
-    background-color: red;
+    width: 20%;
+    background-color: $tech-reserve;
+    .side-bar-header{
+      @include index-header($tech-reserve);
+      color: white;
+      i{
+        padding-left: 5px;
+        font-size: 0.5em;
+      }
+    }
+    .side-bar-index{
+      height: calc(100% - 61px);
+      background-color: $tech-reserve;
+      ul{
+        width: 100%;
+        list-style: none outside;
+        padding-top: 10px;
+        li{
+          width: 40%;
+          float: left;
+          margin: 5px;
+        }
+      }
+      &__name{
+        a{
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
   }
   &__comments{
     height: 100%;
-    width: 60%;
+    width: 80%;
     background-color: blue;
+    .comments-header{
+      @include index-header($white);
+      color: $black;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .comments-main{
+      height: calc(100% - 61px);
+      background-color: $white;
+    }
   }
 }

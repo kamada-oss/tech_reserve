@@ -26,7 +26,7 @@
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |text|text|null: false|
-|learning_time|time|null: false|
+|learning_time|integer|null: false|
 
 ### Association
 - belongs_to :user
