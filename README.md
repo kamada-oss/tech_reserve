@@ -36,7 +36,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
+|name|integer|null: false, unique: true|
 
 ### Association
 - has_many :comments, through: :comment_categories
