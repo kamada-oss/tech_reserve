@@ -1,5 +1,8 @@
 class Category < ApplicationRecord
+  has_many :comment_categories , dependent: :destroy
   has_many :comments, through: :comment_categories
+
+  validates :name, presence:true, uniqueness: true
 
   enum name: {
     PHP:1, JavaScript:2, Python:3, GO:4, Kotlin:5, Java:6, Swift:7,

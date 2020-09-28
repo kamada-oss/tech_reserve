@@ -39,7 +39,8 @@
   &__comments{
     height: 100%;
     width: 80%;
-    background-color: blue;
+    background-color: $white;
+    overflow: auto;
     .comments-header{
       @include index-header($white);
       color: $black;
@@ -49,6 +50,43 @@
     .comments-main{
       height: calc(100% - 61px);
       background-color: $white;
+      .comment{
+        padding: 20px 0 20px 0;
+        border-bottom: solid 1px $border-color;
+        &:hover{
+          background-color: $border-color;
+        }
+        &__head{
+          padding: 0 0 10px 50px;
+          display: flex;
+          height: 15px;
+          line-height: 15px;
+          &--nickname{
+            font-size: 0.9em;
+            font-weight: bold;
+          }
+          &--time{
+            font-size: 0.8em;
+            color: $gray;
+            margin-left: 15px;
+          }
+          &--learning-time{
+            margin-left: 50px;
+            display: flex;
+            h1{
+              font-size: 0.9em;
+              font-weight: bold;
+            }
+            h2{
+              font-size: 0.9em;
+              margin-left: 15px;
+            }
+          }
+        }
+        &__text{
+          padding-left: 50px;
+        }
+      }
     }
   }
 }

@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @comments = @category.comments
+    @comments = @category.comments.includes(:user)
   end
 
   private

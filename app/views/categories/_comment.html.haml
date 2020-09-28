@@ -2,4 +2,21 @@
   .comments-header
     = @category.name
   .comments-main
+    %ul
+      - @comments.each do |comment|  
+        %li.comment
+          .comment__head
+            .comment__head--nickname
+              = comment.user.nickname
+            .comment__head--time
+              = comment.created_at.hour
+              ：
+              = comment.created_at.min
+            .comment__head--learning-time
+              %h1 学習時間
+              %h2 
+                = comment.learning_time
+                分
+          .comment__text
+            = comment.text
     
