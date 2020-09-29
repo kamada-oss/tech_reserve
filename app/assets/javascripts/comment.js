@@ -52,14 +52,14 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('#comments-list').append(html);
-      // $('form')[0].reset();
-      $('#comments-list').animate({ scrollTop: $('#comments-list')[0].scrollHeight});
+      $('form')[0].reset();
+      $('.comments-main').animate({ scrollTop: $('.comments-main')[0].scrollHeight});
       $('#check1').prop('checked',false);
-      $('#new-comment').prop('disabled', false);
+      $('.submit-btn').prop('disabled', false);
     })
      .fail(function(){
       alert("メッセージ送信に失敗しました");
-      $('#new-comment').prop('disabled', false);
+      $('.submit-btn').prop('disabled', false);
     });
   });
 });
