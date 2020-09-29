@@ -1,4 +1,12 @@
 .comment-form__header
   OUTPUTする
 .form-main
-  = form_with model: @comment, local: true, url: registration_send_address_signup_index_path, method: 'GET', class: '' do |f|
+  = form_with model: [@category, @comment], local: true, url: category_comments_path(@category), method: 'POST',  id: 'new-comment' do |f|
+    .form-main__input-text
+      = f.text_area :text, autofocus: true, id: "comment-textarea", placeholder: "How was your day?"
+    = f.collection_check_boxes :category_ids, Category.all, :id, :name
+    .form-main__input
+      作業時間
+      = f.text_field :learning_time, class: ""
+      分
+      = f.submit "Reserve", class: "submit-btn"

@@ -40,7 +40,6 @@
     height: 100%;
     width: 80%;
     background-color: $white;
-    overflow: auto;
     .comments-header{
       @include index-header($white);
       color: $black;
@@ -50,6 +49,7 @@
     .comments-main{
       height: calc(100% - 61px);
       background-color: $white;
+      overflow: auto;
       .comment{
         padding: 20px 0 20px 0;
         border-bottom: solid 1px $border-color;

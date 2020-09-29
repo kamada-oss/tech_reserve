@@ -2,7 +2,7 @@
   .comments-header
     = @category.name
   .comments-main
-    %ul
+    %ul#comments-list
       - @comments.each do |comment|  
         %li.comment
           .comment__head
@@ -18,5 +18,5 @@
                 = comment.learning_time
                 分
           .comment__text
-            = comment.text
+            = safe_join(comment.text.split("\n"),tag(:br))
     

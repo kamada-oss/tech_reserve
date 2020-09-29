@@ -61,7 +61,45 @@
     font-weight: bold;
   }
   .form-main{
-    
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    overflow: auto;
+    &__input-text{
+      textarea{
+        width: 100%;
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
+        background-color: $white;
+        border: none;
+      }
+    }
+    &__input{
+      margin-top: 20px;
+      display: flex;
+      input{
+        border: none;
+        border-bottom: solid 2px $tech-reserve;
+        background-color: $white;
+        width: 20%;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: right;
+      }
+      .submit-btn{
+        display: block;
+        margin:auto;
+        height: 30px;
+        width: 110px;
+        background-color: $tech-reserve;
+        color: $white;
+        border: none;
+        border-radius: 1em;
+        text-align: center;
+      }
+    }
   }
 }
 

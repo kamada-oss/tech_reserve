@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
 
   def show
     @comments = @category.comments.includes(:user)
+    @comment = Comment.new
   end
 
   private
