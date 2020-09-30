@@ -13,12 +13,12 @@
 |------|----|-------|
 |nickname|string|null: false|
 |email|string|null: false, unique: true|
-|password|string|null: false, unique: true|
+|password|string|null: false|
 |introduction|text|
 
 ### Association
-- has_many :likes, dependent: :destroy
-- has_many :comments
+- has_many :goods, dependent: :destroy
+- has_many :comments, dependent: :destroy
 
 ## comments テーブル
 
@@ -26,10 +26,31 @@
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |text|text|null: false|
-|learning_time|time|null: false|
+|learning_time|integer|null: false|
 
 ### Association
 - belongs_to :user
+- has_many :categories, through: :comment_categories
+
+## categoriesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|integer|null: false, unique: true|
+
+### Association
+- has_many :comments, through: :comment_categories
+
+## comment_categories-テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|comment_id|references|null: false, foreign_key: true|
+|category_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :comment
+- belongs_to :category
 
 
 ## goodsテーブル

@@ -1,0 +1,11 @@
+.index-main__side-bar
+  .side-bar-header
+    カテゴリ一覧
+    = icon 'fas', 'chevron-down'
+  .side-bar-index
+    %ul
+      - @categories.each do |category|  
+        %li.side-bar-index__name
+          = link_to category do
+            = icon 'far', 'comment-dots'
+            = category.name

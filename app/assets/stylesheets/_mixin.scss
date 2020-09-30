@@ -7,3 +7,11 @@
   text-align: center;
   line-height: 50px;
 }
+
+@mixin index-header($color){
+  height: 60px;
+      padding-left: 20px;
+      line-height: 60px;
+      background-color: $color;
+      border-bottom: solid 1px $border-color;
+}

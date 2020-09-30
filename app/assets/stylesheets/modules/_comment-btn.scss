@@ -1,0 +1,105 @@
+.comment-btn{
+  height: 140px;
+  width: 140px;
+  background-color: $tech-reserve;
+  position: fixed;
+    bottom: 32px;
+    right: 32px;
+  z-index: 2;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: $white;
+  text-decoration: none;
+  cursor: pointer;
+  i{
+    padding-top: 20px;
+    font-size: 2em;
+  }
+}
+#check1{
+  display: none;
+}
+.blackout{
+  display: none;
+  position: fixed;
+    top: 0;
+    left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+#check1:checked ~ .blackout{
+  display: block;
+  opacity: .5;
+}
+#check1:checked ~ .comment-form{
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.comment-form{
+  width: 40%;
+  height: 80%;
+  position: fixed;
+    bottom: 10px;
+    right: 15%;
+  z-index: 9999;
+  background-color: $white;
+  border: solid 3px $tech-reserve;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  &__header{
+    height: 50px;
+    border-bottom: solid 1px $border-color;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+  }
+  .form-main{
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    overflow: auto;
+    &__input-text{
+      textarea{
+        width: 100%;
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
+        background-color: $white;
+        border: none;
+      }
+    }
+    &__input{
+      margin-top: 20px;
+      display: flex;
+      input{
+        border: none;
+        border-bottom: solid 2px $tech-reserve;
+        background-color: $white;
+        width: 20%;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: right;
+      }
+      .submit-btn{
+        display: block;
+        margin:auto;
+        height: 30px;
+        width: 110px;
+        background-color: $tech-reserve;
+        color: $white;
+        border: none;
+        border-radius: 1em;
+        text-align: center;
+      }
+    }
+  }
+}
+

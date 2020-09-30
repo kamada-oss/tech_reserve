@@ -1,0 +1,9 @@
+= check_box_tag :check1
+= label_tag :check1, class: 'comment-btn' do
+  = icon 'fas', 'feather-alt'
+  .comment-text
+    OUTPUT
+= label_tag :check1, class: 'blackout' do
+  " "
+.comment-form
+  = render 'shared/comment-form'
