@@ -18,5 +18,5 @@
                 = comment.learning_time
                 分
           .comment__text
-            = safe_join(comment.text.split("\n"),tag(:br))
+            = simple_format(comment.text)
     

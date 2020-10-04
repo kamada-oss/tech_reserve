@@ -15,3 +15,13 @@
       background-color: $color;
       border-bottom: solid 1px $border-color;
 }
+
+@mixin form-btn($color){
+  margin-top: 30px;
+  width: 70%;
+  height: 50px;
+  background-color: $color;
+  border: solid 1px $border-color;
+  border-radius: 0.5em;
+  color: $white;
+}

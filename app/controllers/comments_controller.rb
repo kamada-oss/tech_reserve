@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_category
 
   def create
     @comment = Comment.new(comment_params)
-    @comment.user_id = 1
     if @comment.save
       respond_to do |format|
         format.json
@@ -21,6 +21,6 @@ class CommentsController < ApplicationController
       @category = Category.find(params[:category_id])
     end
     def comment_params
-      params.require(:comment).permit(:text, :learning_time, category_ids: [])
+      params.require(:comment).permit(:text, :learning_time, category_ids: []).merge(user_id: current_user.id)
     end
 end

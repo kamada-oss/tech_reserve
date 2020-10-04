@@ -4,12 +4,21 @@
       = icon 'fas', 'chess'
       Tech_Reserve
   .header__message
+  - if user_signed_in?
     %h1
-      ようこそ、ゲストさん！
+      = "ようこそ、#{current_user.nickname}さん！"
+  - else
+    %h1
+      ようこそ！
   .header__login
-    = link_to new_user_registration_path, class: '' do
-      = icon 'fas', 'user-circle'
-      ログイン
+    - if user_signed_in?
+      = link_to destroy_user_session_path, method: :delete, class: '' do
+        = icon 'fas', 'sign-out-alt'
+        ログアウト
+    - else
+      = link_to new_user_session_path, class: '' do
+        = icon 'fas', 'user-circle'
+        ログイン
   .header__output-index
     = link_to '#', class: '' do
       = icon 'fas', 'feather'

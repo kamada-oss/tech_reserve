@@ -10,4 +10,6 @@ class User < ApplicationRecord
             uniqueness: true
   validates :email, presence:true, uniqueness: true, 
             format: { with: VALID_EMAIL_REGEX, message: 'のフォーマットが不適切です'}
+  validates :password, presence: true, length: { in: 7..128 }
+  validates :password_confirmation, presence: true, length: { in: 7..128 }
 end
