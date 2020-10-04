@@ -1,0 +1,49 @@
+.registration-header{
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  a{
+    text-decoration: none;
+    color: $black;
+  }
+  h1{
+    font-size: 0.6em;
+    margin: 10px 0 10px 0;
+    color: $black;
+  }
+}
+.registration-form{
+  margin: auto;
+  width: 50%;
+  // background-color: $gray;
+  .field{
+    margin: 20px 0 0 30%;
+    &__label{
+      font-weight: bold;
+      &--form-require{
+        background-color: $orange;
+        color: $white;
+        font-size: 0.8em;
+        margin-left: 10px;
+      }
+    }
+    &__input{
+      input{
+        text-indent: 0.8em;
+        width: 70%;
+        height: 35px;
+        border: solid 1px $border-color;
+        border-radius: 0.5em;
+      }
+    }
+    .red-btn{
+      margin-top: 30px;
+      width: 70%;
+      height: 50px;
+      background-color: $orange;
+      border: solid 1px $border-color;
+      border-radius: 0.5em;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.registration-header
+  = link_to root_path, class: '' do
+    = icon 'fas', 'chess'
+    Tech_Reserve
+  %h1
+    新規登録
+.registration-form
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    .field
+      .field__label
+        = f.label 'ニックネーム'
+        %span.field__label--form-require 必須
+      - if @user.errors.include?(:nickname)
+        .field__input
+          = f.email_field :nickname, autofocus: true
+          = render partial: 'signup/error-messages', locals: {object: @user, column: 'nickname'}
+      - else
+        .field__input
+          = f.email_field :nickname, autofocus: true
+    .field
+      .field__label
+        = f.label 'メールアドレス'
+        %span.field__label--form-require 必須
+      .field__input
+        = f.email_field :email, autocomplete: "email"
+    .field
+      .field__label
+        = f.label 'パスワード'
+        %span.field__label--form-require 必須
+      .field__input  
+        = f.password_field :password, autocomplete: "new-password"
+    .field
+      .field__label
+        = f.label 'パスワード（確認）'
+        %span.field__label--form-require 必須
+      .field__input
+        = f.password_field :password_confirmation, autocomplete: "new-password"
+    .field
+      = f.submit "登録", class: 'red-btn'
+  -# = render "users/shared/links"
