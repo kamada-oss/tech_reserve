@@ -64,11 +64,13 @@
           &--nickname{
             font-size: 0.9em;
             font-weight: bold;
+            width: 10%;
           }
           &--time{
             font-size: 0.8em;
             color: $gray;
             margin-left: 15px;
+            width: 10%;
           }
           &--learning-time{
             margin-left: 50px;
