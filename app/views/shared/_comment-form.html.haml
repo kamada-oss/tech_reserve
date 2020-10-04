@@ -2,9 +2,15 @@
   OUTPUTする
 .form-main
   = form_with model: [@category, @comment], local: true, url: category_comments_path(@category), method: 'POST',  id: 'new-comment' do |f|
-    .form-main__input-text
-      = f.text_area :text, autofocus: true, id: "comment-textarea", placeholder: "How was your day?"
-    = f.collection_check_boxes :category_ids, Category.all, :id, :name
+    - if @comment.errors.include?(:text)
+      .form-main__input-text
+        = f.text_area :text, autofocus: true, id: "comment-textarea", placeholder: "How was your day?"
+        = render partial: 'signup/error-messages', locals: {object: @category, column: 'text'}
+    - else
+      .form-main__input-text
+        = f.text_area :text, autofocus: true, id: "comment-textarea", placeholder: "How was your day?"
+    #comment-checkbox.form-main__checkbox
+      = f.collection_check_boxes :category_ids, Category.all, :id, :name
     .form-main__input
       作業時間
       = f.text_field :learning_time, class: ""

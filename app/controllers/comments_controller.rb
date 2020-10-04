@@ -6,11 +6,10 @@ class CommentsController < ApplicationController
     @comment.user_id = 1
     if @comment.save
       respond_to do |format|
-        format.html { redirect_to category_path(Category.first)}
         format.json
       end
     else
-      redirect_to root_path
+      render template: "home/top"
     end
   end
 
