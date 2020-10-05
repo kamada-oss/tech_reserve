@@ -1,0 +1,155 @@
+.mypage{
+  height: calc(100vh - 120px);
+  width: 100%;
+  padding: 20px 0 20px 0;
+  background-color: $border-color;
+  display: flex;
+  justify-content: center;
+  .mypage-sidebar{
+    height: 100%;
+    width: 25%;
+    background-color: $white;
+    text-align: center;
+    &__image{
+      margin: 10px 0 20px 0;
+      img{
+        @include image-circle(100px);
+      }
+    }
+    &__nickname{
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    &__introduction{
+      margin-bottom: 20px;
+    }
+    &__counts{
+      display: flex;
+      width: 100%;
+      margin-bottom: 20px;
+      h2{
+        font-size: 0.8em;
+        color: $gray;
+      }
+      &--comments{
+        width: 33%;
+      }
+      &--goods{
+        width: 33%;
+      }
+      &--followers{
+        width: 33%;
+      }
+    }
+    &__btn{
+      display: block;
+      width: 90%;
+      height: 40px;
+      background-color: $tech-reserve;
+      color: $white;
+      margin: auto;
+      text-decoration: none;
+      line-height: 40px;
+    }
+  }
+  .mypage-main{
+    background-color: blue;
+    margin-left: 20px;
+    height: 100%;
+    width: 40%;
+  }
+  .mypage-form{
+    background-color: $white;
+    margin-left: 20px;
+    height: 100%;
+    width: 40%;
+    overflow: auto;
+    &__header{
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      border-bottom: solid 1px $border-color;
+      font-weight: bold;
+    }
+    &__main{
+      .field-image-name{
+        width: 90%;
+        height: 100px;
+        margin: 20px 0 20px 0;
+        display: flex;
+        &__image{
+          text-align: center;
+          width: 40%;
+          .hidden{
+            display: none;
+          }
+          img{
+            @include image-circle(100px);
+            cursor: pointer;
+
+          }
+        }
+        &__name{
+          width: 60%;
+          margin-top: 15px;
+          &--label{
+            font-weight: bold;
+          }
+          &--input{
+            @include edit-prof-nickname($border-color);
+          }
+          &--input-error{
+            @include edit-prof-nickname($orange);
+          }
+        }
+      }
+      .field-introduction{
+        text-align: center;
+        margin-bottom: 20px;
+        &__input{
+          @include edit-prof-introduction($border-color);
+        }
+        &__input-error{
+          @include edit-prof-introduction($orange);
+        }
+      }
+      .field-email{
+        margin: 20px auto;
+        width: 80%;
+        &__label{
+          margin-left: 20px;
+          font-weight: bold;
+        }
+        &__input{
+          @include edit-prof-email($border-color);
+        }
+        &__input-error{
+          @include edit-prof-email($orange);
+        }
+      }
+      .field-password{
+        display: flex;
+        justify-content: center;
+        &__origin{
+          @include edit-prof-password($border-color);
+        }
+        &__confirmation{
+          margin-left: 10px;
+          @include edit-prof-password($border-color);
+        }
+      }
+      .field-btn{
+        text-align: center;
+        .tech-btn{
+          margin-top: 30px;
+          width: 80%;
+          height: 50px;
+          background-color: $tech-reserve;
+          border: solid 1px $border-color;
+          border-radius: 0.5em;
+          color: $white;
+        }
+      }
+    }
+  }
+}

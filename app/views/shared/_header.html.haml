@@ -8,7 +8,7 @@
     - if user_signed_in?
       %h1
         ようこそ、
-        = link_to current_user.nickname, "#", class: ''
+        = link_to current_user.nickname, comment_index_mypage_path(current_user), class: ''
         さん
     - else
       %h1
@@ -23,7 +23,7 @@
         = icon 'fas', 'user-circle'
         ログイン
   .header__output-index
-    = link_to '#', class: '' do
+    = link_to categories_index_path, class: '' do
       = icon 'fas', 'feather'
       アウトプット一覧
     

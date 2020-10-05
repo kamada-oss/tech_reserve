@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   resources :mypage, only: [] do
     member do
-      get 'comment-index'
+      get 'comment_index'
+      get 'edit_profile'
+      post 'update_profile'
     end
   end
 end

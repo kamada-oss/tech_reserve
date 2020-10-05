@@ -1,0 +1,32 @@
+.mypage-sidebar
+  .mypage-sidebar__image
+    - if @user.image.present?
+      = image_tag @user.image.url
+    - else
+      = image_tag src='no_image4.png'
+  .mypage-sidebar__nickname
+    = @user.nickname
+  .mypage-sidebar__introduction
+    - if @user.introduction.present?
+      = simple_format(@user.introduction)
+    - else
+      自己紹介はまだありません
+  .mypage-sidebar__counts
+    .mypage-sidebar__counts--comments
+      = @user.comments.count
+      %h2 投稿
+    .mypage-sidebar__counts--goods
+      = 0
+      %h2 いいね！
+    .mypage-sidebar__counts--followers
+      = 0
+      %h2 フォロワー
+  - if current_user == @user
+    = link_to edit_profile_mypage_path(current_user), class:'mypage-sidebar__btn' do
+      プロフィールを編集
+  - else
+    = link_to '#', class:'mypage-sidebar__btn' do
+      フォロー
+
+
+  

@@ -1,0 +1,61 @@
+= render 'shared/header'
+.mypage
+  = render 'side_bar'
+  .mypage-form
+    .mypage-form__header
+      プロフィール編集
+    .mypage-form__main
+      = form_with model: @user, local: true, url: update_profile_mypage_path, method: 'POST' do |f|
+        .field-image-name
+          .field-image-name__image
+            = f.label :image do
+              - if @user.image.present?
+                = image_tag @user.image.url
+              - else
+                = image_tag src='no_image4.png'
+              = f.file_field :image, class: 'hidden'
+          .field-image-name__name
+            .field-image-name__name--label
+              ニックネーム
+            - if @user.errors.include?(:nickname)
+              .field-image-name__name--input-error
+                = f.text_field :nickname
+            - else
+              .field-image-name__name--input
+                = f.text_field :nickname
+            = render partial: 'shared/error-messages', locals: {object: @user, column: 'nickname'}
+        .field-introduction
+          - if @user.errors.include?(:introduction)
+            .field-introduction__input-error
+              = f.text_area :introduction, autofocus: true
+          - else
+            .field-introduction__input
+              = f.text_area :introduction, autofocus: true
+          = render partial: 'shared/error-messages', locals: {object: @user, column: 'introduction'}
+        .field-email
+          .field-email__label
+            メールアドレス
+          - if @user.errors.include?(:email)
+            .field-email__input-error
+              = f.email_field :email
+          - else 
+            .field-email__input
+              = f.email_field :email
+          = render partial: 'shared/error-messages', locals: {object: @user, column: 'email'}
+        .field-password
+          .field-password__origin
+            .field-password__origin--label
+              新しいパスワード
+            .field-password__origin--input
+              = f.password_field :password, placeholder: '7文字以上の半角英数字'
+          .field-password__confirmation
+            .field-password__confirmation--label
+              新しいパスワード確認
+            .field-password__confirmation--input
+              = f.password_field :password_confirmation, placeholder: '7文字以上の半角英数字'
+        = render partial: 'shared/error-messages', locals: {object: @user, column: 'password'}
+        .field-btn
+          = f.submit '変更する', class: 'tech-btn'
+
+
+        

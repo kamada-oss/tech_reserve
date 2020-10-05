@@ -25,3 +25,60 @@
   border-radius: 0.5em;
   color: $white;
 }
+
+@mixin image-circle($radius){
+  border-radius: 50%;
+  width: $radius;
+  height: $radius;
+  object-fit: cover;
+}
+
+@mixin edit-prof-nickname($color){
+  input{
+    width: 100%;
+    height: 35px;
+    text-indent: 1em;
+    border: solid 1px $color;
+    border-radius: 0.5em;
+  }
+}
+
+@mixin edit-prof-introduction($color){
+  textarea{
+    width: 80%;
+    height: 150px;
+    padding: 1em 0 0 1em;
+    border: solid 1px $color;
+    border-radius: 0.5em;
+  }
+}
+
+@mixin edit-prof-email($color){
+  text-align: center;
+  input{
+    width: 100%;
+    height: 35px;
+    border: solid 1px $color;
+    border-radius: 0.5em;
+    text-indent: 1em;
+  }
+}
+
+@mixin edit-prof-password($color){
+  width: 40%;
+  &--label{
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  &--input{
+    input{
+      width: 100%;
+      height: 35px;
+      border: solid 1px $color;
+      border-radius: 0.5em;
+      text-indent: 1em;
+    }
+  }
+}
+
+
