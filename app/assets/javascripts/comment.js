@@ -12,25 +12,28 @@ $(function(){
   function buildHTML(comment){
     var html =  `
                 <li class='comment'>
-                  <div class='comment__head'>
-                    <div class='comment__head--nickname'>
-                      ${comment.user_name}
-                    </div>
-                    <div class='comment__head--time'>
-                      ${comment.created_at_hour}
-                      ：
-                      ${comment.created_at_min}
-                    </div>
-                    <div class='comment__head--learning-time'>
-                      <h1>学習時間</h1>
-                      <h2>
-                        ${comment.learning_time}
-                        分
-                      </h2>
-                    </div>
+                  <div class='comment__image'>
+                    <img src=${comment.image}/>
                   </div>
-                  <div class='comment__text'>
-                    ${comment.text}
+                  <div class='comment__content'>
+                    <div class='comment__head'>
+                      <div class='comment__head--nickname'>
+                        ${comment.user_name}
+                      </div>
+                      <div class='comment__head--time'>
+                        ${comment.created_at}
+                      </div>
+                      <div class='comment__head--learning-time'>
+                        <h1>学習時間</h1>
+                        <h2>
+                          ${comment.learning_time}
+                          分
+                        </h2>
+                      </div>
+                    </div>
+                    <div class='comment__text'>
+                      ${comment.text}
+                    </div>
                   </div>
                 </li>
                 `

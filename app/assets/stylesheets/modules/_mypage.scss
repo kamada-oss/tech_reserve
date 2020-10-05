@@ -10,6 +10,7 @@
     width: 25%;
     background-color: $white;
     text-align: center;
+    overflow: auto;
     &__image{
       margin: 10px 0 20px 0;
       img{
@@ -53,7 +54,7 @@
     }
   }
   .mypage-main{
-    background-color: blue;
+    background-color: $white;
     margin-left: 20px;
     height: 100%;
     width: 40%;
