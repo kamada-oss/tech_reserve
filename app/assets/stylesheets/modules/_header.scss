@@ -6,14 +6,25 @@
   border-bottom: solid 1px $border-color;
   &__logo{
     margin-left: 20px;
+    width: 30%;
+    font-size: 1.6em;
+    font-weight: bold;
     a{
       text-decoration: none;
-      color: $black;
+      color: $tech-reserve;
+    }
+    img{
+      width: 50%;
+      height: auto;
     }
   }
   &__message{
     margin-left: 20px;
     color: $gray;
+    a{
+      text-decoration: none;
+      color: $tech-reserve;
+    }
   }
   &__login{
     margin-left: 100px;

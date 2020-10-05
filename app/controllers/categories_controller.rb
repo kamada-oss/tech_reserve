@@ -1,7 +1,8 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :redirect_to_login_when_not_signed_in
   before_action :set_category, only:[:show]
   before_action :set_categories
+
   def index
   end
 
@@ -11,6 +12,10 @@ class CategoriesController < ApplicationController
   end
 
   private
+    def redirect_to_login_when_not_signed_in
+      redirect_to new_user_session_path unless user_signed_in?
+    end
+
     def set_category
       @category = Category.find(params[:id])
     end

@@ -5,11 +5,16 @@
     %h1 毎日の学習をアウトプット
     %h2 学習内容を共有したり、
     %h2 視覚的に楽しむサービスです。
-    .top-main__signup
-      = link_to new_user_session_path, class: 'btn-guest' do
-        ログイン
-      = link_to new_user_registration_path, class: 'btn-registration' do
-        ユーザー新規登録
+    - unless user_signed_in?
+      .top-main__signup
+        = link_to new_user_session_path, class: 'btn-guest' do
+          ログイン
+        = link_to new_user_registration_path, class: 'btn-registration' do
+          ユーザー新規登録
+    - else
+      .top-main__signup
+        = link_to categories_index_path, class: 'btn-guest' do
+          はじめる
     .top-main__guest
       %p
         ポートフォリオ用のゲストユーザーのログインは

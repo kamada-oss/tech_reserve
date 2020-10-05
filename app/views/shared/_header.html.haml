@@ -3,13 +3,16 @@
     = link_to root_path, class: '' do
       = icon 'fas', 'chess'
       Tech_Reserve
+      -# = image_tag 'logo.png', size: "100x100", alt: "test"
   .header__message
-  - if user_signed_in?
-    %h1
-      = "ようこそ、#{current_user.nickname}さん！"
-  - else
-    %h1
-      ようこそ！
+    - if user_signed_in?
+      %h1
+        ようこそ、
+        = link_to current_user.nickname, "#", class: ''
+        さん
+    - else
+      %h1
+        ようこそ！
   .header__login
     - if user_signed_in?
       = link_to destroy_user_session_path, method: :delete, class: '' do
