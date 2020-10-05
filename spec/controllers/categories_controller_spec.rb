@@ -33,18 +33,18 @@ describe CategoriesController do
     context 'ログインしている場合' do
       before do
         login user
-        get :show, params: {  id: category }
+        get :show, params: { id: category }
       end
 
       it 'index.html.erbに遷移すること' do
-        expect(response).to render_template :show, params: {  id: category }
+        expect(response).to render_template :show, params: { id: category }
       end
     end
 
     context 'ログインしていない場合' do
       before do
         category = create(:category)
-        get :show, params: {  id: category }
+        get :show, params: { id: category }
       end
 
       it 'トップページにリダイレクトされること' do

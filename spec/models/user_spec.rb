@@ -14,13 +14,13 @@ describe User do
     end
 
     it 'nicknameが20文字以下の場合は登録できること' do
-      user = build(:user, nickname: 'a'*20)
+      user = build(:user, nickname: 'a' * 20)
       user.valid?
       expect(user).to be_valid
     end
 
     it 'nicknameが21文字以上の場合は登録できないこと' do
-      user = build(:user, nickname: 'a'*21)
+      user = build(:user, nickname: 'a' * 21)
       user.valid?
       expect(user.errors[:nickname]).to include("は20文字以内で入力してください")
     end
@@ -60,13 +60,13 @@ describe User do
     end
 
     it 'passwordが6文字以下の場合は登録できないこと' do
-      user = build(:user, password: 'a'*6)
+      user = build(:user, password: 'a' * 6)
       user.valid?
       expect(user.errors[:password]).to include("は7文字以上で入力してください")
     end
 
     it 'passwordが129文字以上の場合は登録できないこと' do
-      user = build(:user, password: 'a'*129)
+      user = build(:user, password: 'a' * 129)
       user.valid?
       expect(user.errors[:password]).to include("は128文字以内で入力してください")
     end
@@ -79,13 +79,13 @@ describe User do
     end
 
     it 'password_confirmationが6文字以下の場合は登録できないこと' do
-      user = build(:user, password_confirmation: 'a'*6)
+      user = build(:user, password_confirmation: 'a' * 6)
       user.valid?
       expect(user.errors[:password_confirmation]).to include("は7文字以上で入力してください")
     end
 
     it 'password_confirmationが129文字以上の場合は登録できないこと' do
-      user = build(:user, password_confirmation: 'a'*129)
+      user = build(:user, password_confirmation: 'a' * 129)
       user.valid?
       expect(user.errors[:password_confirmation]).to include("は128文字以内で入力してください")
     end

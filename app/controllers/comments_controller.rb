@@ -13,14 +13,15 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
-  end
+  def destroy; end
 
   private
-    def set_category
-      @category = Category.find(params[:category_id])
-    end
-    def comment_params
-      params.require(:comment).permit(:text, :learning_time, category_ids: []).merge(user_id: current_user.id)
-    end
+
+  def set_category
+    @category = Category.find(params[:category_id])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:text, :learning_time, category_ids: []).merge(user_id: current_user.id)
+  end
 end
