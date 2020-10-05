@@ -31,6 +31,7 @@ gem "jquery-rails"
 gem "mini_magick"
 gem 'pry-rails'
 gem 'rails-i18n'
+gem 'fog-aws'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
