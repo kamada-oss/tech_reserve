@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show] do
     resources :comments, only: [:create, :destroy]
   end
+
+  resources :mypage, only: [] do
+    member do
+      get 'comment-index'
+    end
+  end
 end
