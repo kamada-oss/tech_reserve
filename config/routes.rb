@@ -6,9 +6,8 @@ Rails.application.routes.draw do
   get 'categories/index'
   get 'categories/show'
   root "home#top"
-  resources :categories, only: %i[index show] do
-    resources :comments, only: %i[create destroy]
-  end
+  resources :categories, only: %i[index show] 
+  resources :comments, only: %i[create destroy]
 
   resources :mypage, only: [] do
     member do

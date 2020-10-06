@@ -3,7 +3,10 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:show]
   before_action :set_categories
 
-  def index; end
+  def index
+    @comments = Comment.all.includes(:user)
+    @comment = Comment.new
+  end
 
   def show
     @comments = @category.comments.includes(:user)

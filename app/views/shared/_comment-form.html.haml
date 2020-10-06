@@ -1,11 +1,11 @@
 .comment-form__header
   OUTPUTする
 .form-main
-  = form_with model: [@category, @comment], local: true, url: category_comments_path(@category), method: 'POST',  id: 'new-comment' do |f|
+  = form_with model: @comment, local: true, url: comments_path, method: 'POST',  id: 'new-comment' do |f|
     - if @comment.errors.include?(:text)
       .form-main__input-text
         = f.text_area :text, autofocus: true, id: "comment-textarea", placeholder: "How was your day?"
-        = render partial: 'signup/error-messages', locals: {object: @category, column: 'text'}
+        = render partial: 'signup/error-messages', locals: {object: @comment, column: 'text'}
     - else
       .form-main__input-text
         = f.text_area :text, autofocus: true, id: "comment-textarea", placeholder: "How was your day?"
