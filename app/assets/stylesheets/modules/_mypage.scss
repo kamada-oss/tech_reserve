@@ -58,10 +58,17 @@
     margin-left: 20px;
     height: 100%;
     width: 40%;
+    overflow: auto;
     &__calendar{
       width: 80%;
       margin: auto;
       padding-top: 20px;
+    }
+    &__chart{
+      width: 80%;
+      margin: auto;
+      padding-top: 20px;
+      text-align: left;
     }
   }
   .mypage-form{

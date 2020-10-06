@@ -34,7 +34,7 @@ gem 'rails-i18n'
 gem 'fog-aws'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
-gem 'chart-js-rails', '~> 0.1.4'
+gem "chartkick"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
