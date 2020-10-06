@@ -1,4 +1,7 @@
-// 以下にimportしたいSCSSファイルを指定する。
+/*
+ *= require fullcalendar
+ */
+ // 以下にimportしたいSCSSファイルを指定する。
 @import "reset";
 @import "font";
 @import "font-awesome-sprockets";
@@ -13,4 +16,5 @@
 @import "modules/registration";
 @import "modules/error-messages";
 @import "modules/mypage";
+@import "modules/calendar";
 

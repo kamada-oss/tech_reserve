@@ -19,6 +19,7 @@
 ### Association
 - has_many :goods, dependent: :destroy
 - has_many :comments, dependent: :destroy
+- has_many :events, dependent: :destroy
 
 ## comments テーブル
 
@@ -63,6 +64,19 @@
 ### Association
 - belongs_to :user
 - belongs_to :item
+
+## eventsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|title|string||
+|body|string||
+|start_date|datetime||
+|end_date|datetime||
+|user_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
 
 
 ## ER図

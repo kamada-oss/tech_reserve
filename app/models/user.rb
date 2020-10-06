@@ -3,6 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable
   has_many :goods, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :events, dependent: :destroy
   mount_uploader :image, ImageUploader
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze

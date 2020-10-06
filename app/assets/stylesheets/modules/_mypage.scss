@@ -58,6 +58,11 @@
     margin-left: 20px;
     height: 100%;
     width: 40%;
+    &__calendar{
+      width: 80%;
+      margin: auto;
+      padding-top: 20px;
+    }
   }
   .mypage-form{
     background-color: $white;
