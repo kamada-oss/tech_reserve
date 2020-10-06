@@ -10,6 +10,7 @@ $(function(){
 
   // コメントのHTMLを返す
   function buildHTML(comment){
+    var text = comment.text.replace(/\n|\r\n|\r/g, '<br>');
     var html =  `
                 <li class='comment'>
                   <div class='comment__image'>
@@ -32,7 +33,7 @@ $(function(){
                       </div>
                     </div>
                     <div class='comment__text'>
-                      ${comment.text}
+                      ${text}
                     </div>
                   </div>
                 </li>
