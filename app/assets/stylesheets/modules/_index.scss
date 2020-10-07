@@ -5,7 +5,7 @@
   // サイドバー
   &__side-bar{
     height: 100%;
-    width: 35%;
+    width: 25%;
     background-color: $tech-reserve;
     .side-bar-header{
       @include index-header($tech-reserve);
@@ -40,7 +40,7 @@
 
   &__comments{
     height: 100%;
-    // width: 80%;
+    width: 100%;
     background-color: $white;
     .comments-header{
       @include index-header($white);
