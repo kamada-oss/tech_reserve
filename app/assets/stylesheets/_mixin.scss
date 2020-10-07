@@ -81,4 +81,7 @@
   }
 }
 
-
+@mixin link_decoration($color){
+  text-decoration: none;
+  color: $color;
+}

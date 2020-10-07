@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :events, dependent: :destroy
   mount_uploader :image, ImageUploader
+  has_many :goods
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
 

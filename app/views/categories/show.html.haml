@@ -1,5 +1,8 @@
 = render 'shared/header'
 .index-main
   = render 'side-bar'
-  = render 'comment'
+  .index-main__comments
+    .comments-header
+      = @category.name
+    = render 'comment'
 = render 'shared/comment-btn'

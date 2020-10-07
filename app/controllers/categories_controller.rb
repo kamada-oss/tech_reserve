@@ -4,12 +4,12 @@ class CategoriesController < ApplicationController
   before_action :set_categories
 
   def index
-    @comments = Comment.all.includes(:user)
+    @comments = Comment.all.includes(:user, :categories)
     @comment = Comment.new
   end
 
   def show
-    @comments = @category.comments.includes(:user)
+    @comments = @category.comments.includes(:user, :categories)
     @comment = Comment.new
   end
 

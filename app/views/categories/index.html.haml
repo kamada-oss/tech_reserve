@@ -1,5 +1,8 @@
 = render 'shared/header'
 .index-main
   = render 'side-bar'
-  = render 'index-main'
-  = render 'shared/comment-btn'
+  .index-main__comments
+    .comments-header
+      アウトプット一覧
+    = render 'comment'
+= render 'shared/comment-btn'

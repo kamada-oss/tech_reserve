@@ -5,11 +5,13 @@
   // サイドバー
   &__side-bar{
     height: 100%;
-    width: 20%;
+    width: 35%;
     background-color: $tech-reserve;
     .side-bar-header{
       @include index-header($tech-reserve);
-      color: white;
+      a{
+        @include link_decoration($white);
+      }
       i{
         padding-left: 5px;
         font-size: 0.5em;
@@ -30,8 +32,7 @@
       }
       &__name{
         a{
-          text-decoration: none;
-          color: $white;
+          @include link_decoration($white);
         }
       }
     }
@@ -39,7 +40,7 @@
 
   &__comments{
     height: 100%;
-    width: 80%;
+    // width: 80%;
     background-color: $white;
     .comments-header{
       @include index-header($white);
@@ -75,6 +76,9 @@
           &--nickname{
             font-size: 0.9em;
             font-weight: bold;
+            a{
+              @include link_decoration($black);
+            }
           }
           &--time{
             font-size: 0.8em;
@@ -96,6 +100,30 @@
         }
         &__text{
           padding-left: 5px;
+        }
+        &__goods{
+          margin-top: 20px;
+          .icon-on{
+            color: $blue;
+            text-decoration: none;
+          }
+          .icon-off{
+            color: $gray;
+            text-decoration: none;
+          }
+        }
+        &__categories{
+          list-style: none;
+          margin-top: 20px;
+          font-weight: bold;
+          a{
+            @include link_decoration($tech-reserve);
+          }
+          li{
+            display: inline-block;
+            margin-right: 20px;
+            border-bottom: solid 1px $tech-reserve;
+          }
         }
       }
     }

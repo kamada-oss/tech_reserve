@@ -34,12 +34,21 @@
       }
       &--comments{
         width: 33%;
+        a{
+          @include link_decoration($black);
+        }
       }
       &--goods{
         width: 33%;
+        a{
+          @include link_decoration($black);
+        }
       }
       &--followers{
         width: 33%;
+        a{
+          @include link_decoration($black);
+        }
       }
     }
     &__btn{
@@ -164,5 +173,11 @@
         }
       }
     }
+  }
+  &__comments{
+    width: 50%;
+    height: 95%;
+    margin-left: 20px;
+    background-color: $white;
   }
 }

@@ -1,0 +1,13 @@
+- if user_signed_in?
+  - if Good.find_by(user_id: current_user.id, comment_id: comment.id)
+    = link_to comment_good_path(comment.id, comment.id), method: :delete, remote: true, class:"icon-on" do
+      = icon 'far', 'thumbs-up'
+      = Good.where(comment_id: comment.id).count
+      nice!
+  - else
+    = link_to comment_goods_path(comment.id), method: :post, remote: true, class:"icon-off" do
+      = icon 'far', 'thumbs-up'
+      = Good.where(comment_id: comment.id).count
+      nice!
+      
+  

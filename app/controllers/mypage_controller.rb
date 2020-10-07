@@ -26,6 +26,18 @@ class MypageController < ApplicationController
     end
   end
 
+  def good_index
+    comment_ids = []
+    @user.goods.each do |good|
+      comment_ids << good.comment_id
+    end
+    @comments = Comment.where(id: comment_ids).includes(:user, :categories)
+  end
+
+  def comments
+    @comments = @user.comments.includes(:user, :categories)
+  end
+
   private
     def set_user
       @user = User.find(params[:id])

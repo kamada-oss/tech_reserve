@@ -13,11 +13,13 @@
       自己紹介はまだありません
   .mypage-sidebar__counts
     .mypage-sidebar__counts--comments
-      = @user.comments.count
-      %h2 投稿
+      = link_to comments_mypage_path, class:'' do
+        = @user.comments.count
+        %h2 投稿
     .mypage-sidebar__counts--goods
-      = 0
-      %h2 いいね！
+      = link_to good_index_mypage_path, class:'' do
+        = @user.goods.count
+        %h2 いいね！
     .mypage-sidebar__counts--followers
       = 0
       %h2 フォロワー

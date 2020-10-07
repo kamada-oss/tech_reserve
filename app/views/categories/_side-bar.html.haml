@@ -1,7 +1,8 @@
 .index-main__side-bar
   .side-bar-header
-    言語一覧
-    = icon 'fas', 'chevron-down'
+    = link_to categories_path do
+      言語一覧
+      = icon 'fas', 'chevron-down'
   .side-bar-index
     %ul
       - @categories.each do |category|  
