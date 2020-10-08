@@ -78,6 +78,16 @@
 ### Association
 - belongs_to :user
 
+## relationshipsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|foreign_key: true, index: true|
+|follow_id|references|foreign_key: true {to_table: :users}|
+
+### Association
+- belongs_to :user
+
 
 ## ER図
 <img width="1148" alt="ER図２" src="https://user-images.githubusercontent.com/64828177/88174033-8777f800-cc5e-11ea-9574-2ba429ef25a5.png">

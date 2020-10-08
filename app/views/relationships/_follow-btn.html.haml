@@ -1,0 +1,7 @@
+#follow-btn
+  - if current_user.following?(user)
+    = link_to user_relationship_path(user.id, user.id), method: :delete, remote: true, class:'mypage-sidebar__btn' do
+      フォロー中
+  - else
+    = link_to user_relationships_path(user.id), method: :post, remote: true, class:'mypage-sidebar__btn' do
+      フォロー

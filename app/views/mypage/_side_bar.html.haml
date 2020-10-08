@@ -21,14 +21,14 @@
         = @user.goods.count
         %h2 いいね！
     .mypage-sidebar__counts--followers
-      = 0
-      %h2 フォロワー
+      = link_to follows_mypage_path, class:'' do
+        = @user.followings.count
+        %h2 フォロー
   - if current_user == @user
     = link_to edit_profile_mypage_path(current_user), class:'mypage-sidebar__btn' do
       プロフィールを編集
   - else
-    = link_to '#', class:'mypage-sidebar__btn' do
-      フォロー
+    = render partial: 'relationships/follow-btn', locals: {user: @user}
 
 
   

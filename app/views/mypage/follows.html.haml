@@ -1,0 +1,23 @@
+= render 'shared/header'
+.mypage
+  = render 'side_bar'
+  .mypage__comments
+    .mypage-form__header
+      フォローした人一覧
+    .mypage-follows
+      - @users.each do |user|
+        .mypage-follow
+          .mypage-follow__image
+            - if user.image.present?
+              = image_tag user.image.url
+            - else
+              = image_tag src='no_image4.png'
+          .mypage-follow__info
+            .mypage-follow__info--nickname
+              = user.nickname
+            .mypage-follow__info--introduction
+              - if user.introduction.present?
+                = user.introduction
+              - else
+                まだ自己紹介はありません
+  

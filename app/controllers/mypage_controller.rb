@@ -38,6 +38,10 @@ class MypageController < ApplicationController
     @comments = @user.comments.includes(:user, :categories)
   end
 
+  def follows
+    @users = @user.followings
+  end
+
   private
     def set_user
       @user = User.find(params[:id])
