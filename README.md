@@ -1,3 +1,6 @@
+# Tech_Reserve
+[![Image from Gyazo](https://i.gyazo.com/4fda834a6ea356f25013d4d31cc2b11b.png)](https://gyazo.com/4fda834a6ea356f25013d4d31cc2b11b)
+
 ## 機能
 - コメント機能
 - いいね機能

@@ -2,9 +2,10 @@
 .top-main
   .top-main__image
   .top-main__text
-    %h1 毎日の学習をアウトプット
-    %h2 学習内容を共有したり、
-    %h2 視覚的に楽しむサービスです。
+    %h1 日々の学習をアウトプット
+    %h2 プログラミング学習の内容を誰かと共有したり、
+    %h2 積み上げを視覚的に楽しむサービスです。
+
     - unless user_signed_in?
       .top-main__signup
         = link_to new_user_session_path, class: 'btn-guest' do
