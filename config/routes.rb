@@ -6,12 +6,14 @@ Rails.application.routes.draw do
   get 'categories/index'
   get 'categories/show'
   root "home#top"
+  get 'home/test'
+
   resources :categories, only: %i[index show]
   resources :comments, only: %i[create destroy] do
     resources :goods, only: %i[create destroy]
   end
   resources :users, only: %i[] do
-    resources :relationships, only: [:create, :destroy]
+    resources :relationships, only: %i[create destroy]
   end
   resources :mypage, only: [] do
     member do

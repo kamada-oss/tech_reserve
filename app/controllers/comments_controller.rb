@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      Event.create(title: "#{@comment.learning_time.to_s}分", body: @comment.learning_time.to_s, 
+      Event.create(title: "#{@comment.learning_time}分", body: @comment.learning_time.to_s,
                    start_date: @comment.created_at, end_date: @comment.created_at, user_id: current_user.id)
       respond_to do |format|
         format.json

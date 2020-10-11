@@ -3,7 +3,11 @@
   = render 'side_bar'
   .mypage__comments
     .mypage-form__header
-      いいね一覧！
+      投稿一覧
     .index-main__comments
-      = render 'categories/comment'
+      - if @comments.present?
+        = render 'categories/comment'
+      - else
+        .mypage__nothing
+          投稿はまだありません。
   

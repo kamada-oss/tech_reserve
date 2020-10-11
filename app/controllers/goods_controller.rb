@@ -10,6 +10,7 @@ class GoodsController < ApplicationController
   end
 
   private
+
   def set_comment
     @comment = Comment.find(params[:comment_id])
   end

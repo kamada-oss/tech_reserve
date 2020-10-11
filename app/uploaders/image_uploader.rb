@@ -5,7 +5,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   # storage :file
-  if Rails.env.development? || Rails.env.test? 
+  if Rails.env.development? || Rails.env.test?
     storage :file
   else
     storage :fog
@@ -19,14 +19,14 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  #デフォルト画像の設定
+  # デフォルト画像の設定
   # Provide a default URL as a default if there hasn't been a file uploaded:
   version :thumb_300 do
-    process :resize_to_fit => [300, 300]
+    process resize_to_fit: [300, 300]
   end
 
   def default_url
-      ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
+    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
   end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)

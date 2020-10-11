@@ -22,19 +22,19 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'carrierwave'
+gem "chartkick"
 gem 'devise'
 gem 'devise'
+gem 'fog-aws'
 gem 'font-awesome-sass'
+gem 'fullcalendar-rails'
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.5'
 gem "jquery-rails"
 gem "mini_magick"
+gem 'momentjs-rails'
 gem 'pry-rails'
 gem 'rails-i18n'
-gem 'fog-aws'
-gem 'fullcalendar-rails'
-gem 'momentjs-rails'
-gem "chartkick"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

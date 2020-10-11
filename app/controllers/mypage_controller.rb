@@ -7,8 +7,7 @@ class MypageController < ApplicationController
     create_chart
   end
 
-  def edit_profile
-  end
+  def edit_profile; end
 
   def update_profile
     if @user.update(user_params)
@@ -43,43 +42,42 @@ class MypageController < ApplicationController
   end
 
   private
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    def user_params
-      params.require(:user).permit(
-        :image,
-        :nickname,
-        :introduction,
-        :email,
-        :password,
-        :password_confirmation
-      )
-    end
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    def create_chart
-      # コメントに対して、カテゴリと学習時間を取得
-      chart_hi = []
-      @comments.each do |comment|
-        comment.categories.each do |category|
-          chart_hi.push([category.name, comment.learning_time])
+  def user_params
+    params.require(:user).permit(
+      :image,
+      :nickname,
+      :introduction,
+      :email,
+      :password,
+      :password_confirmation
+    )
+  end
+
+  def create_chart
+    # コメントに対して、カテゴリと学習時間を取得
+    chart_hi = []
+    @comments.each do |comment|
+      comment.categories.each do |category|
+        chart_hi.push([category.name, comment.learning_time])
+      end
+    end
+    # 重複レコードの学習時間を集計
+    @chart = []
+    flg = 0
+    chart_hi.each do |chart_h|
+      @chart.each do |chart|
+        if chart[0] == chart_h[0]
+          chart[1] += chart_h[1]
+          flg = 1
         end
       end
-      # 重複レコードの学習時間を集計
-      @chart = []
+      @chart << chart_h if flg == 0
       flg = 0
-      chart_hi.each do |chart_h|
-        @chart.each do |chart|
-          if chart[0] == chart_h[0]
-            chart[1] += chart_h[1]
-            flg = 1
-          end
-        end
-        if flg == 0
-          @chart << chart_h
-        end
-        flg = 0
-      end
     end
+  end
 end
