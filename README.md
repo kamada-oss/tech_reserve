@@ -1,12 +1,36 @@
 # Tech_Reserve
 [![Image from Gyazo](https://i.gyazo.com/4fda834a6ea356f25013d4d31cc2b11b.png)](https://gyazo.com/4fda834a6ea356f25013d4d31cc2b11b)
 
-## 機能
-- コメント機能
-- いいね機能
-- マイページ機能
-- ログイン機能
 
+## 概要
+このアプリでは、
+日々のプログラミング学習をアウトプットすることで、
+1. 誰かと学習した内容を共有したり、
+2. 積み上げた学習を視覚的に楽しむことが出来ます。
+  
+## URL
+http://3.113.149.111/
+  
+## 使用技術
+- Ruby 2.5.1
+- Ruby on Rails 5.2.4.4
+- jQuery
+- ajax
+- AWS(S3,EC2)
+- Nginx,Unicorn
+- Capistranoによる自動デプロイ
+- RSpec
+- Rubocop
+  
+## 機能
+- ログイン　ユーザー登録（devise）
+- プロフィール画像投稿（aws-fog, carrierwave, mini_magick）
+- アウトプット投稿 (ajax)
+- アウトプットに対する「いいね！」（ajax）
+- アウトプットに対する「フォロー」（ajax）
+- アウトプットのカテゴライズ
+- カレンダーとアウトプットを紐付けて表示（fullcalendar-rails, momentjs-rails）
+- アウトプットをグラフ化（chartkick）
 
 # DBテーブル構成
 
