@@ -23,7 +23,7 @@ http://3.113.149.111/
 - Rubocop
   
 ## 機能
-- ログイン　ユーザー登録（devise）
+- ログイン ユーザー登録（devise）
 - プロフィール画像投稿（aws-fog, carrierwave, mini_magick）
 - アウトプット投稿 (ajax)
 - アウトプットに対する「いいね！」（ajax）
@@ -32,11 +32,12 @@ http://3.113.149.111/
 - カレンダーとアウトプットを紐付けて表示（fullcalendar-rails, momentjs-rails）
 - アウトプットをグラフ化（chartkick）
 
-# DBテーブル構成
-
- ## usersテーブル
-
-|Column|Type|Options|
+## ER図
+[![Image from Gyazo](https://i.gyazo.com/4846661937688c7fa3b13a46bf5ecabd.png)](https://gyazo.com/4846661937688c7fa3b13a46bf5ecabd)
+  
+  
+<!-- ↓過去のバックアップ -->
+<!-- |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
 |email|string|null: false, unique: true|
@@ -113,8 +114,7 @@ http://3.113.149.111/
 |follow_id|references|foreign_key: true {to_table: :users}|
 
 ### Association
-- belongs_to :user
-
+- belongs_to :user -->
 
 <!-- ## ER図
 <img width="1148" alt="ER図２" src="https://user-images.githubusercontent.com/64828177/88174033-8777f800-cc5e-11ea-9574-2ba429ef25a5.png"> -->
