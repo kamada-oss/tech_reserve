@@ -52,4 +52,5 @@ production:
   database: tech_reserve_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
   socket: /var/lib/mysql/mysql.sock
