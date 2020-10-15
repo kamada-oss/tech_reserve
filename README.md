@@ -9,14 +9,14 @@
 2. 積み上げた学習を視覚的に楽しむことが出来ます。
   
 ## URL
-http://3.113.149.111/
+https://techreserve.tk/
   
 ## 使用技術
 - Ruby 2.5.1
 - Ruby on Rails 5.2.4.4
 - jQuery
 - ajax
-- AWS(S3,EC2)
+- AWS(EC2,RDS for MySQL,S3,VPC,Route53,ALB,ACM)
 - Nginx,Unicorn
 - Capistranoによる自動デプロイ
 - RSpec
@@ -31,6 +31,9 @@ http://3.113.149.111/
 - アウトプットのカテゴライズ
 - カレンダーとアウトプットを紐付けて表示（fullcalendar-rails, momentjs-rails）
 - アウトプットをグラフ化（chartkick）
+
+## インフラ構造図
+[![Image from Gyazo](https://i.gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935.png)](https://gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935)
 
 ## ER図
 [![Image from Gyazo](https://i.gyazo.com/4846661937688c7fa3b13a46bf5ecabd.png)](https://gyazo.com/4846661937688c7fa3b13a46bf5ecabd)
