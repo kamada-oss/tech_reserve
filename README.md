@@ -33,6 +33,7 @@ https://techreserve.tk/
 - アウトプットをグラフ化（chartkick）
 
 ## インフラ構造図
+<img width="1148" alt="ER図２" src="https://i.gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935.png">
 [![Image from Gyazo](https://i.gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935.png)](https://gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935)
 
 ## ER図
@@ -119,5 +120,5 @@ https://techreserve.tk/
 ### Association
 - belongs_to :user -->
 
-<!-- ## ER図
-<img width="1148" alt="ER図２" src="https://user-images.githubusercontent.com/64828177/88174033-8777f800-cc5e-11ea-9574-2ba429ef25a5.png"> -->
+## ER図
+<img width="1148" alt="ER図２" src="https://user-images.githubusercontent.com/64828177/88174033-8777f800-cc5e-11ea-9574-2ba429ef25a5.png">
