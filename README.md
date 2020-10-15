@@ -1,6 +1,5 @@
 # Tech_Reserve
-[![Image from Gyazo](https://i.gyazo.com/4fda834a6ea356f25013d4d31cc2b11b.png)](https://gyazo.com/4fda834a6ea356f25013d4d31cc2b11b)
-
+<img width="1148" src="https://i.gyazo.com/4fda834a6ea356f25013d4d31cc2b11b.png">
 
 ## 概要
 このアプリでは、
@@ -33,11 +32,10 @@ https://techreserve.tk/
 - アウトプットをグラフ化（chartkick）
 
 ## インフラ構造図
-<img width="1148" alt="ER図２" src="https://i.gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935.png">
-[![Image from Gyazo](https://i.gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935.png)](https://gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935)
+<img width="1148" src="https://i.gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935.png">
 
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/4846661937688c7fa3b13a46bf5ecabd.png)](https://gyazo.com/4846661937688c7fa3b13a46bf5ecabd)
+<img width="1148" src="https://i.gyazo.com/4846661937688c7fa3b13a46bf5ecabd.png">
   
   
 <!-- ↓過去のバックアップ -->
