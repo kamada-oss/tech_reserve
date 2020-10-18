@@ -11,11 +11,12 @@
 https://techreserve.tk/
   
 ## 使用技術
-- Ruby 2.5.1
+- Ruby 2.6.2
 - Ruby on Rails 5.2.4.4
 - jQuery
 - ajax
-- AWS(EC2,RDS for MySQL,S3,VPC,Route53,ALB,ACM)
+- AWS(EC2, RDS for MySQL, S3, VPC, Route53, ALB, ACM)
+- Docker/docker-compose
 - Nginx,Unicorn
 - Capistranoによる自動デプロイ
 - RSpec
@@ -32,7 +33,7 @@ https://techreserve.tk/
 - アウトプットをグラフ化（chartkick）
 
 ## インフラ構造図
-<img width="1148" src="https://i.gyazo.com/a46fe8f51a402af4c4dfaa7eafb9f935.png">
+<img width="1148" src="https://i.gyazo.com/dbc51f45804e4c9b304375693e2da35c.png">
 
 ## ER図
 <img width="1148" src="https://i.gyazo.com/4846661937688c7fa3b13a46bf5ecabd.png">
