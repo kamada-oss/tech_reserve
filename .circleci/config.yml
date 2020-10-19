@@ -19,7 +19,7 @@ jobs:
             # CircleCI に登録した秘密鍵を呼び出す
             - add_ssh_keys:
               fingerprints:
-                - 3b:87:c4:92:c2:1c:80:a1:e0:f4:f6:d1:04:65:86:54
+                - "3b:87:c4:92:c2:1c:80:a1:e0:f4:f6:d1:04:65:86:54"
             # CircleCI に登録した環境変数を使って SSH
             - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/tech_reserve && git pull origin master'
  
