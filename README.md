@@ -18,7 +18,7 @@ https://techreserve.tk/
 - AWS(EC2, RDS for MySQL, S3, VPC, Route53, ALB, ACM)
 - Docker/docker-compose
 - Nginx,Unicorn
-- Capistranoによる自動デプロイ
+- CircleCI
 - RSpec
 - Rubocop
   
