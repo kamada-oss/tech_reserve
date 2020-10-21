@@ -33,7 +33,7 @@ https://techreserve.tk/
 - アウトプットをグラフ化（chartkick）
 
 ## インフラ構造図
-<img width="1148" src="https://i.gyazo.com/dbc51f45804e4c9b304375693e2da35c.png">
+<img width="1148" src="https://i.gyazo.com/c76f4ee08741727c047e19df8d6eb29f.png">
 
 ## ER図
 <img width="1148" src="https://i.gyazo.com/4846661937688c7fa3b13a46bf5ecabd.png">
@@ -121,4 +121,3 @@ https://techreserve.tk/
 
 <!-- ## ER図
 <img width="1148" alt="ER図２" src="https://user-images.githubusercontent.com/64828177/88174033-8777f800-cc5e-11ea-9574-2ba429ef25a5.png"> -->
-circleCI
