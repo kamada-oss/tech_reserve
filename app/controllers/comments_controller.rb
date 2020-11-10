@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_comment, only: [:destroy :edit]
+  before_action :set_comment, only: %i[destroy edit]
 
   def create
     @comment = Comment.new(comment_params)
@@ -16,10 +16,11 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    binding.pry
     @comment.destroy
     redirect_back(fallback_location: root_path)
   end
+
+  def edit; end
 
   private
 
