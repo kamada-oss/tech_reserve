@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_10_08_142639) do
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_categories_on_name", unique: true
   end
 
-  create_table "comment_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "comment_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.bigint "comment_id"
     t.bigint "category_id"
     t.datetime "created_at", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_142639) do
     t.index ["comment_id"], name: "index_comment_categories_on_comment_id"
   end
 
-  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.text "text"
     t.integer "learning_time"
     t.bigint "user_id"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_142639) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "title"
     t.string "body"
     t.datetime "start_date"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_142639) do
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
-  create_table "goods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "goods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.bigint "comment_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_142639) do
     t.index ["user_id"], name: "index_goods_on_user_id"
   end
 
-  create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "follow_id"
     t.datetime "created_at", null: false
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_142639) do
     t.index ["user_id"], name: "index_relationships_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", null: false
     t.text "introduction"

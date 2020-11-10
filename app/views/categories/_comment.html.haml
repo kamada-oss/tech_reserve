@@ -8,6 +8,16 @@
               = image_tag comment.user.image.url
             - else
               = image_tag src='no_image4.png'
+          - if comment.user == current_user
+            .comment__edit
+              = icon 'fas', 'bars'
+            %ul.comment__list
+              %li
+                =link_to comment_path(comment), method: :delete do
+                  削除
+              %li
+                =link_to edit_comment_path(comment) do
+                  編集
         .comment__content
           .comment__head
             .comment__head--nickname

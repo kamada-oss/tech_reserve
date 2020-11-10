@@ -21,8 +21,8 @@ default: &default
 development:
   <<: *default
   database: tech_reserve_development
-  username: root
-  password: moto0726
+  username: test
+  password: test
   host: db
   socket: /tmp/mysql.sock
 

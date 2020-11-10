@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'home/test'
 
   resources :categories, only: %i[index show]
-  resources :comments, only: %i[create destroy] do
+  resources :comments, only: %i[create destroy edit] do
     resources :goods, only: %i[create destroy]
   end
   resources :users, only: %i[] do

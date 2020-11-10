@@ -66,8 +66,25 @@
           img{
             @include image-circle(50px);
           }
-          
         }
+        &__edit{
+          color: $gray;
+          margin: 10px 0 0 0;
+          cursor: pointer;
+        }
+        &__list{
+          display: none;
+          a{
+            text-decoration: none;
+            color: $tech-reserve;
+            font-weight: bold;
+          }
+          li{
+            width: 80%;
+            border-bottom: solid 1px $tech-reserve;
+          }
+        }
+
         &__head{
           padding: 0 0 10px 5px;
           display: flex;

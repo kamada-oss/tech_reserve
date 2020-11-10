@@ -66,4 +66,12 @@ $(function(){
       $('.submit-btn').prop('disabled', false);
     });
   });
+
+  // edit, destroyボタン表示
+  $('.comment__edit').each(function(){
+    $(this).on('click', function(){
+      $(this).next('ul').slideToggle('fast');
+      return false;
+    });
+  });
 });
